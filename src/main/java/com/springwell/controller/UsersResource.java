@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UsersResource {
 
-    private UsersService usersService;
+    private final UsersService usersService;
 
     @Autowired
     public UsersResource(UsersService usersService) {
@@ -19,7 +19,6 @@ public class UsersResource {
 
     @GetMapping("/users")
     public List<Users> getAllUsers() {
-        List<Users> usersList = usersService.getAllUsers();
-        return usersList;
+        return usersService.getAllUsers();
     }
 }
