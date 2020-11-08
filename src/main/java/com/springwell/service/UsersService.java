@@ -15,7 +15,15 @@ public class UsersService {
         users.setFirstName("Adarshpal");
         users.setLastName("Brar");
         users.setEmail("adarshpal.brar@gmail.com");
-        List<Users> usersList = Arrays.asList(users);
-        return usersList;
+        users.setDepartment("IT Team Lead");
+
+        Users users2 = new Users();
+        users2.setId(2L);
+        users2.setFirstName("Raghu");
+        users2.setLastName("Singh");
+        users2.setEmail("leo_raghu@hotmail.com");
+        users2.setDepartment("Junior developer");
+
+        return Arrays.asList(users, users2);
     }
 }

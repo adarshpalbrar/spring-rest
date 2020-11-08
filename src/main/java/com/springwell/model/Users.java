@@ -11,6 +11,8 @@ public class Users {
 
     private String email;
 
+    private String department;
+
     public Users() {
     }
 
@@ -45,4 +47,13 @@ public class Users {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
 }
