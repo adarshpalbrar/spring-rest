@@ -1,6 +1,8 @@
 package com.springwell.model;
 
 
+import java.time.LocalDate;
+
 public class Users {
 
     private Long id;
@@ -12,6 +14,8 @@ public class Users {
     private String email;
 
     private String department;
+
+    private LocalDate dob;
 
     public Users() {
     }
@@ -56,4 +60,11 @@ public class Users {
         this.department = department;
     }
 
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
 }
