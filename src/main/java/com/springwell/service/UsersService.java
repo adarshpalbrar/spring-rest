@@ -1,21 +1,27 @@
 package com.springwell.service;
 
+import com.springwell.dao.UsersDao;
 import com.springwell.model.Users;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UsersService {
 
-    public List<Users> getAllUsers() {
-        Users users = new Users();
-        users.setId(1L);
-        users.setFirstName("Adarshpal");
-        users.setLastName("Brar");
-        users.setEmail("adarshpal.brar@gmail.com");
-        List<Users> usersList = Arrays.asList(users);
-        return usersList;
-    }
+	public List<Users> getAllUsers() {
+		return UsersDao.getAllUsers();
+	}
+
+	public List<Users> getUsersByAge(int age) {
+		List<Users> users = UsersDao.getAllUsers();
+		return users.stream().filter(s -> s.getAge() > age).collect(Collectors.toList());
+	}
+
+	public List<Users> getUsersByFirstName(String fName) {
+		List<Users> users = UsersDao.getAllUsers();
+		return users.stream().filter(s -> s.getFirstName().equalsIgnoreCase(fName)).collect(Collectors.toList());
+	}
 }
