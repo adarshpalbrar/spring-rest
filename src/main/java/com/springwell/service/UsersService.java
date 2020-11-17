@@ -24,4 +24,9 @@ public class UsersService {
 		List<Users> users = UsersDao.getAllUsers();
 		return users.stream().filter(s -> s.getFirstName().equalsIgnoreCase(fName)).collect(Collectors.toList());
 	}
+
+	public List<Users> getUsersByLastName(String lName) {
+		List<Users> users = UsersDao.getAllUsers();
+		return users.stream().filter(s -> s.getLastName().equalsIgnoreCase(lName)).collect(Collectors.toList());
+	}
 }
