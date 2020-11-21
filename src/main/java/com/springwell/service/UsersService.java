@@ -3,6 +3,7 @@ package com.springwell.service;
 import com.springwell.model.Users;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class UsersService {
         users.setEmail("adarshpal.brar@gmail.com");
         users.setJobDescription("Java Developer");
         users.setAge(40);
+        users.setSalary(new BigDecimal(75_000.00));
         List<Users> usersList = Arrays.asList(users);
         return usersList;
     }
