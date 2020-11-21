@@ -11,6 +11,8 @@ public class Users {
 
     private String email;
 
+    private String jobDescription;
+
     public Users() {
     }
 
@@ -44,5 +46,13 @@ public class Users {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getJobDescription() {
+        return jobDescription;
+    }
+
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription = jobDescription;
     }
 }
