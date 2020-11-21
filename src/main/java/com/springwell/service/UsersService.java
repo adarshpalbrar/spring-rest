@@ -22,5 +22,6 @@ public class UsersService {
         users.setDateOfBirth(LocalDate.of(1980, Month.DECEMBER, 7));
         List<Users> usersList = Arrays.asList(users);
         return usersList;
+        // added comments
     }
 }
