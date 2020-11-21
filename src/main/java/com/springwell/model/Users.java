@@ -1,6 +1,8 @@
 package com.springwell.model;
 
 
+import java.time.LocalDate;
+
 public class Users {
 
     private Long id;
@@ -12,6 +14,8 @@ public class Users {
     private String email;
     
     private int age;
+
+    private LocalDate dateOfBirth;
 
     private String jobDescription;
 
@@ -63,5 +67,13 @@ public class Users {
 
 	public void setAge(int age) {
 		this.age = age;
-	}    
+	}
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 }
