@@ -16,6 +16,7 @@ public class UsersService {
         users.setLastName("Brar");
         users.setEmail("adarshpal.brar@gmail.com");
         users.setJobDescription("Java Developer");
+        users.setAge(40);
         List<Users> usersList = Arrays.asList(users);
         return usersList;
     }

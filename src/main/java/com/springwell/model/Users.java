@@ -10,6 +10,8 @@ public class Users {
     private String lastName;
 
     private String email;
+    
+    private int age;
 
     private String jobDescription;
 
@@ -55,4 +57,11 @@ public class Users {
     public void setJobDescription(String jobDescription) {
         this.jobDescription = jobDescription;
     }
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}    
 }
