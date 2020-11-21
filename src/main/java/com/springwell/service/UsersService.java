@@ -21,5 +21,6 @@ public class UsersService {
         users.setSalary(new BigDecimal(75_000.00));
         List<Users> usersList = Arrays.asList(users);
         return usersList;
+        // added comments
     }
 }
