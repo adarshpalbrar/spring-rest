@@ -1,5 +1,6 @@
 package com.springwell.model;
 
+import java.math.BigDecimal;
 
 import java.time.LocalDate;
 
@@ -18,6 +19,8 @@ public class Users {
     private LocalDate dateOfBirth;
 
     private String jobDescription;
+    
+    private BigDecimal salary;
 
     public Users() {
     }
@@ -76,4 +79,12 @@ public class Users {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+	public BigDecimal getSalary() {
+		return salary;
+	}
+
+	public void setSalary(BigDecimal salary) {
+		this.salary = salary;
+	}
+	
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class UsersService {
         users.setJobDescription("Java Developer");
         users.setAge(40);
         users.setDateOfBirth(LocalDate.of(1980, Month.DECEMBER, 7));
+        users.setSalary(new BigDecimal(75_000.00));
         List<Users> usersList = Arrays.asList(users);
         return usersList;
         // added comments
